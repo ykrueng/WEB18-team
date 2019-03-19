@@ -1,13 +1,45 @@
-import React, { Component } from 'react';
+import React from 'react'
+import StudentCard from './StudentCard'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        App
-      </div>
-    );
-  }
+const students = [
+  {
+    name: 'Anthony'
+  },
+  {
+    name: 'Dayton'
+  },
+  {
+    name: 'Stephanie'
+  },
+  {
+    name: 'Cameron'
+  },
+  {
+    name: 'Christian'
+  },
+  {
+    name: 'Jeff'
+  },
+  {
+    name: 'Mario'
+  },
+  {
+    name: 'Omar'
+  },
+  {
+    name: 'Will'
+  },
+]
+
+export default () => {
+  return (
+    <div className="App">
+      App
+      {
+        students && students.map(
+          student => <StudentCard student={student} />
+        )
+      }
+    </div>
+  )
 }
-
-export default App;
