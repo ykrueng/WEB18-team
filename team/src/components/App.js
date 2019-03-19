@@ -1,45 +1,61 @@
 import React from 'react'
+import { Container, Header, Card } from 'semantic-ui-react'
+
 import StudentCard from './StudentCard'
+
 
 const students = [
   {
-    name: 'Anthony'
+    name: 'Anthony',
+    gitHub: 'https://github.com/divbySeptember'
   },
   {
-    name: 'Dayton'
+    name: 'Dayton',
+    gitHub: 'https://github.com/DaytonS3'
   },
   {
-    name: 'Stephanie'
+    name: 'Stephanie',
+    gitHub: 'https://github.com/StephanieRP'
   },
   {
-    name: 'Cameron'
+    name: 'Cameron',
+    gitHub: 'https://github.com/cammac725'
   },
   {
-    name: 'Christian'
+    name: 'Christian',
+    gitHub: 'https://github.com/chrisipanaque'
   },
   {
-    name: 'Jeff'
+    name: 'Jeff',
+    gitHub: 'https://github.com/lappjeff'
   },
   {
-    name: 'Mario'
+    name: 'Mario',
+    gitHub: 'https://github.com/thefozcat'
   },
   {
-    name: 'Omar'
+    name: 'Omar',
+    gitHub: 'https://github.com/ok1a'
   },
   {
-    name: 'Will'
+    name: 'Will',
+    gitHub: 'https://github.com/brellin'
   },
 ]
 
 export default () => {
   return (
-    <div className="App">
-      App
-      {
-        students && students.map(
-          student => <StudentCard student={student} />
-        )
-      }
-    </div>
+    <Container text>
+      <Header as='h1' textAlign='center' style={{ margin: '3rem' }}>
+        My WEB-18 Team
+      </Header>
+      <Card.Group>
+        {
+          students && students.map(
+            student => <StudentCard key={student.name} student={student} />
+          )
+        }
+      </Card.Group>
+    </Container>
   )
 }
