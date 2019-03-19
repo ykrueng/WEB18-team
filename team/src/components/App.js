@@ -31,7 +31,7 @@ const students = [
   },
   {
     name: 'Mario',
-    gitHub: 'https://github.com/thefozcat'
+    gitHub: 'https://github.com/MAmaya1'
   },
   {
     name: 'Omar',
